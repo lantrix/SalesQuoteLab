@@ -49,7 +49,7 @@
                 <ns2:StringFeature value="" name="NAMESPACE"/>
                 <ns2:StringFeature value="PROJECT_DEFAULT" name="generatesEvents"/>
                 <ns2:StringFeature value="HORIZONTAL_LAYOUT" name="process-layout"/>
-                <ns2:StringFeature value="1.0" name="scale"/>
+                <ns2:StringFeature value="0.75" name="scale"/>
                 <ns2:StringFeature value="REGULAR" name="sealType"/>
             </ns2:FeatureSet>
         </ns2:OracleExtensions>
@@ -76,7 +76,7 @@
         <userTask implementation="other" isForCompensation="false" name="Business Practices Review" id="activity1">
             <ns2:OracleExtensions>
                 <ns2:GraphicsAttributes>
-                    <ns2:Position y="322" x="442"/>
+                    <ns2:Position y="300" x="392"/>
                     <ns2:Size height="21" width="21"/>
                 </ns2:GraphicsAttributes>
                 <ns2:FeatureSet>
@@ -93,6 +93,82 @@
             <ioSpecification/>
             <performer name="Business Practices" id="lane0"/>
         </userTask>
+        <userTask implementation="other" isForCompensation="false" name="Approve Deal" id="activity2">
+            <ns2:OracleExtensions>
+                <ns2:GraphicsAttributes>
+                    <ns2:Position y="500" x="512"/>
+                    <ns2:Size height="21" width="21"/>
+                </ns2:GraphicsAttributes>
+                <ns2:FeatureSet>
+                    <ns2:BooleanFeature value="false" name="reinitiate"/>
+                    <ns2:BooleanFeature value="false" name="manualCreation"/>
+                    <ns2:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
+                    <ns2:StringFeature value="Begin Level" name="level"/>
+                    <ns2:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
+                    <ns2:StringFeature value="REUSE_PAYLOAD" name="reinitiatorPolicy"/>
+                    <ns2:StringFeature value="SIMPLE" name="humanTaskType"/>
+                </ns2:FeatureSet>
+                <ns2:HumanTask usesTransformations="false"/>
+            </ns2:OracleExtensions>
+            <ioSpecification/>
+            <performer name="Approvers" id="lane2"/>
+        </userTask>
+        <userTask implementation="other" isForCompensation="false" name="Approve Terms" id="activity3">
+            <ns2:OracleExtensions>
+                <ns2:GraphicsAttributes>
+                    <ns2:Position y="700" x="632"/>
+                    <ns2:Size height="21" width="21"/>
+                </ns2:GraphicsAttributes>
+                <ns2:FeatureSet>
+                    <ns2:BooleanFeature value="false" name="reinitiate"/>
+                    <ns2:BooleanFeature value="false" name="manualCreation"/>
+                    <ns2:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
+                    <ns2:StringFeature value="Begin Level" name="level"/>
+                    <ns2:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
+                    <ns2:StringFeature value="REUSE_PAYLOAD" name="reinitiatorPolicy"/>
+                    <ns2:StringFeature value="SIMPLE" name="humanTaskType"/>
+                </ns2:FeatureSet>
+                <ns2:HumanTask usesTransformations="false"/>
+            </ns2:OracleExtensions>
+            <ioSpecification/>
+            <performer name="Contracts" id="lane3"/>
+        </userTask>
+        <userTask implementation="other" isForCompensation="false" name="Finalize Contracts" id="activity4">
+            <ns2:OracleExtensions>
+                <ns2:GraphicsAttributes>
+                    <ns2:Position y="700" x="774"/>
+                    <ns2:Size height="21" width="21"/>
+                </ns2:GraphicsAttributes>
+                <ns2:FeatureSet>
+                    <ns2:BooleanFeature value="false" name="reinitiate"/>
+                    <ns2:BooleanFeature value="false" name="manualCreation"/>
+                    <ns2:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
+                    <ns2:StringFeature value="Begin Level" name="level"/>
+                    <ns2:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
+                    <ns2:StringFeature value="REUSE_PAYLOAD" name="reinitiatorPolicy"/>
+                    <ns2:StringFeature value="SIMPLE" name="humanTaskType"/>
+                </ns2:FeatureSet>
+                <ns2:HumanTask usesTransformations="false"/>
+            </ns2:OracleExtensions>
+            <ioSpecification/>
+            <performer name="Contracts" id="lane3"/>
+        </userTask>
+        <serviceTask isForCompensation="false" name="Save Quote" id="activity5">
+            <ns2:OracleExtensions>
+                <ns2:GraphicsAttributes>
+                    <ns2:Position y="700" x="916"/>
+                    <ns2:Size height="21" width="21"/>
+                </ns2:GraphicsAttributes>
+                <ns2:FeatureSet>
+                    <ns2:StringFeature value="" name="associatedProcess"/>
+                    <ns2:StringFeature value="" name="associatedNode"/>
+                    <ns2:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
+                    <ns2:StringFeature value="Begin Level" name="level"/>
+                    <ns2:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
+                </ns2:FeatureSet>
+            </ns2:OracleExtensions>
+            <ioSpecification/>
+        </serviceTask>
         <startEvent isInterrupting="false" name="Start" id="startEvent0">
             <ns2:OracleExtensions>
                 <ns2:GraphicsAttributes>
@@ -110,7 +186,7 @@
         <endEvent name="End" id="endEvent0">
             <ns2:OracleExtensions>
                 <ns2:GraphicsAttributes>
-                    <ns2:Position y="322" x="612"/>
+                    <ns2:Position y="700" x="1036"/>
                     <ns2:Size height="21" width="21"/>
                 </ns2:GraphicsAttributes>
                 <ns2:FeatureSet>
@@ -141,7 +217,47 @@
                 </ns2:FeatureSet>
             </ns2:OracleExtensions>
         </sequenceFlow>
-        <sequenceFlow targetRef="endEvent0" sourceRef="activity1" name="sf27" id="sf27">
+        <sequenceFlow targetRef="activity2" sourceRef="activity1" name="sf27" id="sf27">
+            <ns2:OracleExtensions>
+                <ns2:SequenceFlowAttributes/>
+                <ns2:FeatureSet>
+                    <ns2:BooleanFeature value="false" name="collapseMessage"/>
+                    <ns2:StringFeature value="-2147483648,-2147483648" name="curve"/>
+                    <ns2:StringFeature value="STRAIGHT" name="routing"/>
+                </ns2:FeatureSet>
+            </ns2:OracleExtensions>
+        </sequenceFlow>
+        <sequenceFlow targetRef="activity3" sourceRef="activity2" name="sf30" id="sf30">
+            <ns2:OracleExtensions>
+                <ns2:SequenceFlowAttributes/>
+                <ns2:FeatureSet>
+                    <ns2:BooleanFeature value="false" name="collapseMessage"/>
+                    <ns2:StringFeature value="-2147483648,-2147483648" name="curve"/>
+                    <ns2:StringFeature value="STRAIGHT" name="routing"/>
+                </ns2:FeatureSet>
+            </ns2:OracleExtensions>
+        </sequenceFlow>
+        <sequenceFlow targetRef="activity4" sourceRef="activity3" name="sf33" id="sf33">
+            <ns2:OracleExtensions>
+                <ns2:SequenceFlowAttributes/>
+                <ns2:FeatureSet>
+                    <ns2:BooleanFeature value="false" name="collapseMessage"/>
+                    <ns2:StringFeature value="-2147483648,-2147483648" name="curve"/>
+                    <ns2:StringFeature value="STRAIGHT" name="routing"/>
+                </ns2:FeatureSet>
+            </ns2:OracleExtensions>
+        </sequenceFlow>
+        <sequenceFlow targetRef="activity5" sourceRef="activity4" name="sf36" id="sf36">
+            <ns2:OracleExtensions>
+                <ns2:SequenceFlowAttributes/>
+                <ns2:FeatureSet>
+                    <ns2:BooleanFeature value="false" name="collapseMessage"/>
+                    <ns2:StringFeature value="-2147483648,-2147483648" name="curve"/>
+                    <ns2:StringFeature value="STRAIGHT" name="routing"/>
+                </ns2:FeatureSet>
+            </ns2:OracleExtensions>
+        </sequenceFlow>
+        <sequenceFlow targetRef="endEvent0" sourceRef="activity5" name="sf39" id="sf39">
             <ns2:OracleExtensions>
                 <ns2:SequenceFlowAttributes/>
                 <ns2:FeatureSet>
