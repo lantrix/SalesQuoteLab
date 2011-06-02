@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modelSimulation name="NormalLoad" processVariation="" processPath="/RequestQuoteLabYuri.xpdl" processId="RequestQuoteLabYuri" maxInstances="100" useMaxInstances="false" xmlns="http://www.bea.com/aqualogic/bpm/simulation" >
+    <activities>
+        <activity queueWarningLevel="1" queuePolicy="FIFO" activityCostType="FIXED_BASE_COST" participantSelectionPolicy="MINIMUM_COST" name="gateway3" exceptionProbability="0.0" abortProbability="0.0" cost="0.0" useOrgResources="false" capacity="1" innerSimulation="false">
+            <distribution>
+                <normalDistribution deviation="3000000" mean="30000000"/>
+            </distribution>
+        </activity>
+        <activity queueWarningLevel="1" queuePolicy="FIFO" activityCostType="FIXED_BASE_COST" participantSelectionPolicy="MINIMUM_COST" name="gateway2" exceptionProbability="0.0" abortProbability="0.0" cost="0.0" useOrgResources="false" capacity="1" innerSimulation="false">
+            <distribution>
+                <normalDistribution deviation="3000000" mean="30000000"/>
+            </distribution>
+        </activity>
+        <activity queueWarningLevel="1" queuePolicy="FIFO" activityCostType="FIXED_BASE_COST" participantSelectionPolicy="MINIMUM_COST" name="gateway1" exceptionProbability="0.0" abortProbability="0.0" cost="0.0" useOrgResources="false" capacity="1" innerSimulation="false">
+            <distribution>
+                <normalDistribution deviation="3000000" mean="30000000"/>
+            </distribution>
+        </activity>
+        <activity queueWarningLevel="1" queuePolicy="FIFO" activityCostType="FIXED_BASE_COST" participantSelectionPolicy="MINIMUM_COST" name="gateway0" exceptionProbability="0.0" abortProbability="0.0" cost="0.0" useOrgResources="false" capacity="1" innerSimulation="false">
+            <distribution>
+                <normalDistribution deviation="3000000" mean="30000000"/>
+            </distribution>
+        </activity>
+        <activity queueWarningLevel="1" queuePolicy="FIFO" activityCostType="FIXED_BASE_COST" participantSelectionPolicy="MINIMUM_COST" name="endEvent0" exceptionProbability="0.0" abortProbability="0.0" cost="0.0" useOrgResources="false" capacity="1" innerSimulation="false">
+            <distribution>
+                <normalDistribution deviation="3000000" mean="30000000"/>
+            </distribution>
+        </activity>
+        <activity queueWarningLevel="1" queuePolicy="FIFO" activityCostType="FIXED_BASE_COST" participantSelectionPolicy="MINIMUM_COST" name="activity1" exceptionProbability="0.0" abortProbability="0.0" cost="100.0" useOrgResources="true" capacity="1" innerSimulation="false">
+            <distribution>
+                <normalDistribution deviation="3000000" mean="1800000000"/>
+            </distribution>
+        </activity>
+        <activity queueWarningLevel="1" queuePolicy="FIFO" activityCostType="FIXED_BASE_COST" participantSelectionPolicy="MINIMUM_COST" name="activity2" exceptionProbability="0.0" abortProbability="0.0" cost="100.0" useOrgResources="true" capacity="1" innerSimulation="false">
+            <distribution>
+                <normalDistribution deviation="3000000" mean="1200000000"/>
+            </distribution>
+        </activity>
+        <activity queueWarningLevel="1" queuePolicy="FIFO" activityCostType="FIXED_BASE_COST" participantSelectionPolicy="MINIMUM_COST" name="activity0" exceptionProbability="0.0" abortProbability="0.0" cost="30.0" useOrgResources="true" capacity="1" innerSimulation="false">
+            <distribution>
+                <normalDistribution deviation="3000000" mean="1200000000"/>
+            </distribution>
+        </activity>
+        <activity queueWarningLevel="1" queuePolicy="FIFO" activityCostType="FIXED_BASE_COST" participantSelectionPolicy="MINIMUM_COST" name="activity5" exceptionProbability="0.0" abortProbability="0.0" cost="0.0" useOrgResources="false" capacity="100" innerSimulation="false">
+            <distribution>
+                <normalDistribution deviation="3000000" mean="30000000"/>
+            </distribution>
+        </activity>
+        <activity queueWarningLevel="1" queuePolicy="FIFO" activityCostType="FIXED_BASE_COST" participantSelectionPolicy="MINIMUM_COST" name="activity3" exceptionProbability="0.0" abortProbability="0.0" cost="50.0" useOrgResources="true" capacity="1" innerSimulation="false">
+            <distribution>
+                <normalDistribution deviation="3000000" mean="600000000"/>
+            </distribution>
+        </activity>
+        <activity queueWarningLevel="1" queuePolicy="FIFO" activityCostType="FIXED_BASE_COST" participantSelectionPolicy="MINIMUM_COST" name="activity4" exceptionProbability="0.0" abortProbability="0.0" cost="60.0" useOrgResources="true" capacity="1" innerSimulation="false">
+            <distribution>
+                <normalDistribution deviation="3000000" mean="1200000000"/>
+            </distribution>
+        </activity>
+        <activity queueWarningLevel="1" queuePolicy="FIFO" activityCostType="FIXED_BASE_COST" participantSelectionPolicy="MINIMUM_COST" name="startEvent0" exceptionProbability="0.0" abortProbability="0.0" cost="0.0" useOrgResources="false" capacity="1" innerSimulation="false">
+            <distribution>
+                <normalDistribution deviation="3000000" mean="30000000"/>
+            </distribution>
+        </activity>
+        <activity queueWarningLevel="1" queuePolicy="FIFO" activityCostType="FIXED_BASE_COST" participantSelectionPolicy="MINIMUM_COST" name="gateway4" exceptionProbability="0.0" abortProbability="0.0" cost="0.0" useOrgResources="false" capacity="1" innerSimulation="false">
+            <distribution>
+                <normalDistribution deviation="3000000" mean="30000000"/>
+            </distribution>
+        </activity>
+    </activities>
+    <transitions>
+        <transition name="sf64" probability="1.0"/>
+        <transition name="sf45" probability="0.9"/>
+        <transition name="sf76" probability="1.0"/>
+        <transition name="sf48" probability="0.1"/>
+        <transition name="sf68" probability="1.0"/>
+        <transition name="sf79" probability="0.0"/>
+        <transition name="sf85" probability="0.5"/>
+        <transition name="sf88" probability="0.5"/>
+        <transition name="sf82" probability="1.0"/>
+        <transition name="sf36" probability="1.0"/>
+        <transition name="sf24" probability="1.0"/>
+        <transition name="sf22" probability="1.0"/>
+        <transition name="sf39" probability="1.0"/>
+        <transition name="sf73" probability="1.0"/>
+        <transition name="sf27" probability="1.0"/>
+        <transition name="sf71" probability="1.0"/>
+    </transitions>
+    <distribution>
+        <normalDistribution deviation="3000000" mean="30000000"/>
+    </distribution>
+    <calculatedDistributions/>
+</modelSimulation>
