@@ -76,7 +76,7 @@
         <userTask implementation="other" isForCompensation="false" name="Business Practices Review" id="activity1">
             <ns2:OracleExtensions>
                 <ns2:GraphicsAttributes>
-                    <ns2:Position y="300" x="392"/>
+                    <ns2:Position y="303" x="509"/>
                     <ns2:Size height="21" width="21"/>
                 </ns2:GraphicsAttributes>
                 <ns2:FeatureSet>
@@ -96,7 +96,7 @@
         <userTask implementation="other" isForCompensation="false" name="Approve Deal" id="activity2">
             <ns2:OracleExtensions>
                 <ns2:GraphicsAttributes>
-                    <ns2:Position y="500" x="512"/>
+                    <ns2:Position y="506" x="695"/>
                     <ns2:Size height="21" width="21"/>
                 </ns2:GraphicsAttributes>
                 <ns2:FeatureSet>
@@ -116,7 +116,7 @@
         <userTask implementation="other" isForCompensation="false" name="Approve Terms" id="activity3">
             <ns2:OracleExtensions>
                 <ns2:GraphicsAttributes>
-                    <ns2:Position y="700" x="632"/>
+                    <ns2:Position y="705" x="862"/>
                     <ns2:Size height="21" width="21"/>
                 </ns2:GraphicsAttributes>
                 <ns2:FeatureSet>
@@ -136,7 +136,7 @@
         <userTask implementation="other" isForCompensation="false" name="Finalize Contracts" id="activity4">
             <ns2:OracleExtensions>
                 <ns2:GraphicsAttributes>
-                    <ns2:Position y="700" x="774"/>
+                    <ns2:Position y="705" x="1004"/>
                     <ns2:Size height="21" width="21"/>
                 </ns2:GraphicsAttributes>
                 <ns2:FeatureSet>
@@ -156,7 +156,7 @@
         <serviceTask isForCompensation="false" name="Save Quote" id="activity5">
             <ns2:OracleExtensions>
                 <ns2:GraphicsAttributes>
-                    <ns2:Position y="700" x="916"/>
+                    <ns2:Position y="705" x="1146"/>
                     <ns2:Size height="21" width="21"/>
                 </ns2:GraphicsAttributes>
                 <ns2:FeatureSet>
@@ -186,7 +186,7 @@
         <endEvent name="End" id="endEvent0">
             <ns2:OracleExtensions>
                 <ns2:GraphicsAttributes>
-                    <ns2:Position y="700" x="1036"/>
+                    <ns2:Position y="705" x="1266"/>
                     <ns2:Size height="21" width="21"/>
                 </ns2:GraphicsAttributes>
                 <ns2:FeatureSet>
@@ -197,6 +197,19 @@
             </ns2:OracleExtensions>
             <inputSet/>
         </endEvent>
+        <exclusiveGateway gatewayDirection="unspecified" name="Is Business Practices Review required?" id="gateway0">
+            <ns2:OracleExtensions>
+                <ns2:GraphicsAttributes>
+                    <ns2:Position y="302" x="247"/>
+                    <ns2:Size height="21" width="21"/>
+                </ns2:GraphicsAttributes>
+                <ns2:FeatureSet>
+                    <ns2:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
+                    <ns2:StringFeature value="Begin Level" name="level"/>
+                    <ns2:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
+                </ns2:FeatureSet>
+            </ns2:OracleExtensions>
+        </exclusiveGateway>
         <sequenceFlow targetRef="activity0" sourceRef="startEvent0" name="sf22" id="sf22">
             <ns2:OracleExtensions>
                 <ns2:SequenceFlowAttributes/>
@@ -207,7 +220,7 @@
                 </ns2:FeatureSet>
             </ns2:OracleExtensions>
         </sequenceFlow>
-        <sequenceFlow targetRef="activity1" sourceRef="activity0" name="sf24" id="sf24">
+        <sequenceFlow targetRef="gateway0" sourceRef="activity0" name="sf24" id="sf24">
             <ns2:OracleExtensions>
                 <ns2:SequenceFlowAttributes/>
                 <ns2:FeatureSet>
@@ -264,6 +277,30 @@
                     <ns2:BooleanFeature value="false" name="collapseMessage"/>
                     <ns2:StringFeature value="-2147483648,-2147483648" name="curve"/>
                     <ns2:StringFeature value="STRAIGHT" name="routing"/>
+                </ns2:FeatureSet>
+            </ns2:OracleExtensions>
+        </sequenceFlow>
+        <sequenceFlow targetRef="activity1" sourceRef="gateway0" name="sf45" id="sf45">
+            <ns2:OracleExtensions>
+                <ns2:SequenceFlowAttributes/>
+                <ns2:FeatureSet>
+                    <ns2:BooleanFeature value="false" name="collapseMessage"/>
+                    <ns2:StringFeature value="-2147483648,-2147483648" name="curve"/>
+                    <ns2:StringFeature value="STRAIGHT" name="routing"/>
+                    <ns2:StringFeature value="Yes" name="userName"/>
+                    <ns2:IntegerFeature value="0" name="order"/>
+                </ns2:FeatureSet>
+            </ns2:OracleExtensions>
+            <conditionExpression xsi:type="tFormalExpression"/>
+        </sequenceFlow>
+        <sequenceFlow targetRef="activity2" sourceRef="gateway0" name="sf48" id="sf48">
+            <ns2:OracleExtensions>
+                <ns2:SequenceFlowAttributes/>
+                <ns2:FeatureSet>
+                    <ns2:BooleanFeature value="false" name="collapseMessage"/>
+                    <ns2:StringFeature value="-2147483648,-2147483648" name="curve"/>
+                    <ns2:StringFeature value="STRAIGHT" name="routing"/>
+                    <ns2:StringFeature value="No" name="userName"/>
                 </ns2:FeatureSet>
             </ns2:OracleExtensions>
         </sequenceFlow>

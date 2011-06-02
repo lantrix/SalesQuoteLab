@@ -69,6 +69,14 @@
                     <description locale="en"></description>
                 </descriptions>
             </topicDocumentation>
+            <topicDocumentation name="gateway0">
+                <labels>
+                    <label locale="en">Is Business Practices Review required?</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
             <topicDocumentation name="sf22"/>
             <topicDocumentation name="sf24"/>
             <topicDocumentation name="sf27"/>
@@ -76,6 +84,16 @@
             <topicDocumentation name="sf33"/>
             <topicDocumentation name="sf36"/>
             <topicDocumentation name="sf39"/>
+            <topicDocumentation name="sf45">
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf48">
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
         </topicDocumentations>
     </component>
 </processDocumentation>
