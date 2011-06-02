@@ -93,6 +93,22 @@
                     <description locale="en"></description>
                 </descriptions>
             </topicDocumentation>
+            <topicDocumentation name="gateway3">
+                <labels>
+                    <label locale="en">Business Practices Outcome</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="gateway4">
+                <labels>
+                    <label locale="en">Approvals Outcome</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
             <topicDocumentation name="sf22"/>
             <topicDocumentation name="sf24"/>
             <topicDocumentation name="sf27"/>
@@ -113,6 +129,26 @@
             <topicDocumentation name="sf71"/>
             <topicDocumentation name="sf73"/>
             <topicDocumentation name="sf76"/>
+            <topicDocumentation name="sf79">
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf82">
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf85">
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf88">
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
         </topicDocumentations>
     </component>
 </processDocumentation>
