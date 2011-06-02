@@ -445,5 +445,40 @@
             </ns2:OracleExtensions>
             <conditionExpression xsi:type="tFormalExpression"/>
         </sequenceFlow>
+        <dataObject name="approveDealOutcome" id="approveDealOutcome">
+            <ns2:OracleExtensions>
+                <ns2:DataObjectType initialize="true">
+                    <ns2:TypeRef isArray="false" type="string" namespace="http://www.w3.org/2001/XMLSchema"/>
+                </ns2:DataObjectType>
+            </ns2:OracleExtensions>
+        </dataObject>
+        <dataObject name="approveTermsOutcome" id="approveTermsOutcome">
+            <ns2:OracleExtensions>
+                <ns2:DataObjectType initialize="true">
+                    <ns2:TypeRef isArray="false" type="string" namespace="http://www.w3.org/2001/XMLSchema"/>
+                </ns2:DataObjectType>
+            </ns2:OracleExtensions>
+        </dataObject>
+        <dataObject name="businessPracticesOutcome" id="businessPracticesOutcome">
+            <ns2:OracleExtensions>
+                <ns2:DataObjectType initialize="true">
+                    <ns2:TypeRef isArray="false" type="string" namespace="http://www.w3.org/2001/XMLSchema"/>
+                </ns2:DataObjectType>
+            </ns2:OracleExtensions>
+        </dataObject>
+        <dataObject name="businessPracticesReviewRequire" id="businessPracticesReviewRequire">
+            <ns2:OracleExtensions>
+                <ns2:DataObjectType initialize="true">
+                    <ns2:TypeRef isArray="false" type="boolean" namespace="http://www.w3.org/2001/XMLSchema"/>
+                </ns2:DataObjectType>
+            </ns2:OracleExtensions>
+        </dataObject>
+        <dataObject name="quote" id="quote">
+            <ns2:OracleExtensions>
+                <ns2:DataObjectType initialize="true">
+                    <ns2:TypeRef isArray="false" element="QuoteRequest" namespace="http://www.mycompany.com/ns/salesquote"/>
+                </ns2:DataObjectType>
+            </ns2:OracleExtensions>
+        </dataObject>
     </process>
 </definitions>
