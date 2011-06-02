@@ -8,7 +8,7 @@
         <categoryProbability value="0.2"/>
     </categoryProbabilities>
     <resources>
-        <resource name="Approvers" efficiency="100.0" capacity="2" virtual="false" selected="true" cost="1.0" availability="100">
+        <resource name="Approvers" efficiency="100.0" capacity="5" virtual="false" selected="true" cost="1.0" availability="100">
             <roles>
                 <role id="Approvers"/>
             </roles>
