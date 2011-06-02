@@ -7,9 +7,21 @@
             <ns5:name>QuoteProcessLab_Yuri.ProcessOwner</ns5:name>
             <ns1:processRole name="Process Owner" id="ProcessOwner"/>
         </ns1:applicationRole>
-        <ns1:applicationRole isProcessRole="false" id="QuoteProcessLab_Yuri.Role">
+        <ns1:applicationRole isProcessRole="true" id="QuoteProcessLab_Yuri.Role">
             <ns5:name>QuoteProcessLab_Yuri.Role</ns5:name>
-            <ns1:processRole name="Role" id="Role"/>
+            <ns1:processRole name="SalesRep" id="Role"/>
+        </ns1:applicationRole>
+        <ns1:applicationRole isProcessRole="false" id="QuoteProcessLab_Yuri.Approvers">
+            <ns5:name>QuoteProcessLab_Yuri.Approvers</ns5:name>
+            <ns1:processRole name="Approvers" id="Approvers"/>
+        </ns1:applicationRole>
+        <ns1:applicationRole isProcessRole="false" id="QuoteProcessLab_Yuri.BusinessPractices">
+            <ns5:name>QuoteProcessLab_Yuri.BusinessPractices</ns5:name>
+            <ns1:processRole name="Business Practices" id="BusinessPractices"/>
+        </ns1:applicationRole>
+        <ns1:applicationRole isProcessRole="false" id="QuoteProcessLab_Yuri.Contracts">
+            <ns5:name>QuoteProcessLab_Yuri.Contracts</ns5:name>
+            <ns1:processRole name="Contracts" id="Contracts"/>
         </ns1:applicationRole>
     </ns1:applicationRoles>
     <ns1:applicationRoleOrgUnitCalendarAssociations/>
