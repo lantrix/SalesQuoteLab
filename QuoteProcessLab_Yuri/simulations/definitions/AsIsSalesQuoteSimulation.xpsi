@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectSimulation inflightFinish="true" startTime="1306991498281000" name="AsIsSalesQuoteSimulation" duration="10h" useCalendarRules="false" xmlns="http://www.bea.com/aqualogic/bpm/simulation" >
+    <categoryProbabilities>
+        <categoryProbability value="0.2"/>
+        <categoryProbability value="0.2"/>
+        <categoryProbability value="0.2"/>
+        <categoryProbability value="0.2"/>
+        <categoryProbability value="0.2"/>
+    </categoryProbabilities>
+    <resources>
+        <resource name="Approvers" efficiency="100.0" capacity="2" virtual="false" selected="true" cost="1.0" availability="100">
+            <roles>
+                <role id="Approvers"/>
+            </roles>
+        </resource>
+        <resource name="JaneDoe" efficiency="100.0" capacity="1" virtual="false" selected="true" cost="1.0" availability="100">
+            <roles>
+                <role id="BusinessPractices"/>
+            </roles>
+        </resource>
+        <resource name="Maggie" efficiency="100.0" capacity="3" virtual="false" selected="true" cost="1.0" availability="100">
+            <roles>
+                <role id="Contracts"/>
+            </roles>
+        </resource>
+        <resource name="SalesRep" efficiency="100.0" capacity="6" virtual="false" selected="true" cost="1.0" availability="100">
+            <roles>
+                <role id="Role"/>
+            </roles>
+        </resource>
+    </resources>
+    <modelSimulations>
+        <modelSimulation modelId="/RequestQuoteLabYuri.xpdl" modelVariation="" modelSimulationId="NormalLoad"/>
+    </modelSimulations>
+</projectSimulation>
