@@ -61,17 +61,83 @@
                 </ns2:GraphicsAttributes>
                 <ns2:FeatureSet>
                     <ns2:BooleanFeature value="false" name="reinitiate"/>
-                    <ns2:BooleanFeature value="false" name="manualCreation"/>
+                    <ns2:BooleanFeature value="true" name="manualCreation"/>
                     <ns2:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
                     <ns2:StringFeature value="Begin Level" name="level"/>
                     <ns2:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
                     <ns2:StringFeature value="REUSE_PAYLOAD" name="reinitiatorPolicy"/>
-                    <ns2:StringFeature value="SIMPLE" name="humanTaskType"/>
-                    <ns2:StringFeature value="" name="reinitiateSource"/>
+                    <ns2:StringFeature value="INITIATOR" name="humanTaskType"/>
                 </ns2:FeatureSet>
-                <ns2:HumanTask usesTransformations="false"/>
+                <ns2:HumanTask usesTransformations="false" humanTaskReference="HumanTasks.EnterQuoteDetails"/>
             </ns2:OracleExtensions>
-            <ioSpecification/>
+            <ioSpecification>
+                <dataInput name="quoteRequest" id="quoteRequest">
+                    <ns2:OracleExtensions>
+                        <ns2:TypeRef isArray="false" element="QuoteRequest" namespace="http://www.mycompany.com/ns/salesquote"/>
+                    </ns2:OracleExtensions>
+                </dataInput>
+                <dataInput name="execData" id="execData">
+                    <ns2:OracleExtensions>
+                        <ns2:TypeRef isArray="false" element="task" namespace="http://xmlns.oracle.com/bpel/workflow/task"/>
+                    </ns2:OracleExtensions>
+                </dataInput>
+                <dataOutput name="outcome" id="outcome">
+                    <ns2:OracleExtensions>
+                        <ns2:TypeRef isArray="false" type="string" namespace="http://www.w3.org/2001/XMLSchema"/>
+                    </ns2:OracleExtensions>
+                </dataOutput>
+                <dataOutput name="quoteRequest" id="quoteRequest">
+                    <ns2:OracleExtensions>
+                        <ns2:TypeRef isArray="false" element="QuoteRequest" namespace="http://www.mycompany.com/ns/salesquote"/>
+                    </ns2:OracleExtensions>
+                </dataOutput>
+                <dataOutput name="execData" id="execData">
+                    <ns2:OracleExtensions>
+                        <ns2:TypeRef isArray="false" element="task" namespace="http://xmlns.oracle.com/bpel/workflow/task"/>
+                    </ns2:OracleExtensions>
+                </dataOutput>
+                <inputSet id="activity0_uniqueInputSet">
+                    <dataInput name="quoteRequest" id="quoteRequest">
+                        <ns2:OracleExtensions>
+                            <ns2:TypeRef isArray="false" element="QuoteRequest" namespace="http://www.mycompany.com/ns/salesquote"/>
+                        </ns2:OracleExtensions>
+                    </dataInput>
+                    <dataInput name="execData" id="execData">
+                        <ns2:OracleExtensions>
+                            <ns2:TypeRef isArray="false" element="task" namespace="http://xmlns.oracle.com/bpel/workflow/task"/>
+                        </ns2:OracleExtensions>
+                    </dataInput>
+                </inputSet>
+                <outputSet id="activity0_uniqueOutputSet">
+                    <dataOutput name="outcome" id="outcome">
+                        <ns2:OracleExtensions>
+                            <ns2:TypeRef isArray="false" type="string" namespace="http://www.w3.org/2001/XMLSchema"/>
+                        </ns2:OracleExtensions>
+                    </dataOutput>
+                    <dataOutput name="quoteRequest" id="quoteRequest">
+                        <ns2:OracleExtensions>
+                            <ns2:TypeRef isArray="false" element="QuoteRequest" namespace="http://www.mycompany.com/ns/salesquote"/>
+                        </ns2:OracleExtensions>
+                    </dataOutput>
+                    <dataOutput name="execData" id="execData">
+                        <ns2:OracleExtensions>
+                            <ns2:TypeRef isArray="false" element="task" namespace="http://xmlns.oracle.com/bpel/workflow/task"/>
+                        </ns2:OracleExtensions>
+                    </dataOutput>
+                </outputSet>
+            </ioSpecification>
+            <dataOutputAssociation>
+                <ns2:OracleExtensions/>
+                <assignment language="http://www.w3.org/1999/XPath">
+                    <ns2:OracleExtensions>
+                        <ns2:DataAssignment mode="simple" isCustom="false"/>
+                    </ns2:OracleExtensions>
+                    <from language="http://www.w3.org/1999/XPath" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataOutput('quoteRequest')</from>
+                    <to language="http://www.w3.org/1999/XPath" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataObject('quote')</to>
+                </assignment>
+                <sourceRef>quoteRequest</sourceRef>
+                <targetRef>quote</targetRef>
+            </dataOutputAssociation>
             <performer name="SalesRep" id="lane1"/>
         </userTask>
         <userTask implementation="other" isForCompensation="false" name="Business Practices Review" id="activity1">
