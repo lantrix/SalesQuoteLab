@@ -5,10 +5,10 @@
         <topicDocumentations>
             <topicDocumentation name="RequestQuoteLabYuri">
                 <labels>
-                    <label locale="en">RequestQuoteLab_Yuri</label>
+                    <label locale="en">RequestQuoteLab</label>
                 </labels>
                 <descriptions>
-                    <description locale="en">RequestQuoteLab_Yuri</description>
+                    <description locale="en">RequestQuoteLab</description>
                 </descriptions>
             </topicDocumentation>
             <topicDocumentation name="startEvent0">

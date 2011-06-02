@@ -37,7 +37,7 @@
             <ns2:LaneAttributes roleId="Contracts"/>
         </ns2:OracleExtensions>
     </peopleGroup>
-    <process processType="executable" name="RequestQuoteLab_Yuri" id="RequestQuoteLabYuri">
+    <process processType="executable" name="RequestQuoteLab" id="RequestQuoteLabYuri">
         <ns2:OracleExtensions>
             <ns2:FeatureSet>
                 <ns2:BooleanFeature value="false" name="atomic"/>
