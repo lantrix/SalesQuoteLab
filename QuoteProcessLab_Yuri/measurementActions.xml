@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Actions xmlns="http://xmlns.oracle.com/bpm/analytics/measurement">
+    <compositeDN>QuoteProcessLab_Yuri</compositeDN>
+    <action enabled="false" name="BAMCommand">
+        <interfaceName>oracle.bpm.analytics.bam.action.BAMActionMDB</interfaceName>
+        <properties>
+            <property name="InBatch">false</property>
+            <property name="CachedConnections">false</property>
+            <property name="DataObjectPath">/Samples/Monitor Express</property>
+            <property name="BAMDeploymentUseHTTPS">false</property>
+        </properties>
+        <measurementElementName>QuoteProcessLab_Yuri</measurementElementName>
+    </action>
+    <action enabled="true" name="CubeCommand">
+        <interfaceName>oracle.bpm.analytics.cube.action.CubeActionMDB</interfaceName>
+        <properties/>
+        <measurementElementName>QuoteProcessLab_Yuri</measurementElementName>
+    </action>
+</Actions>

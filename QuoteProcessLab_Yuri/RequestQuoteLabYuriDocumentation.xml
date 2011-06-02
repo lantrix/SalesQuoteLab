@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="11.1.1" fileRevision="20100611"?>
+<processDocumentation xmlns="http://xmlns.oracle.com/bpm/taskMetadataService/processDocumentation">
+    <component name="RequestQuoteLabYuri">
+        <topicDocumentations>
+            <topicDocumentation name="RequestQuoteLabYuri">
+                <labels>
+                    <label locale="en">RequestQuoteLab_Yuri</label>
+                </labels>
+                <descriptions>
+                    <description locale="en">RequestQuoteLab_Yuri</description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="startEvent0">
+                <labels>
+                    <label locale="en">Start</label>
+                </labels>
+            </topicDocumentation>
+            <topicDocumentation name="endEvent0">
+                <labels>
+                    <label locale="en">End</label>
+                </labels>
+            </topicDocumentation>
+            <topicDocumentation name="activity0">
+                <labels>
+                    <label locale="en">UserTask</label>
+                </labels>
+            </topicDocumentation>
+            <topicDocumentation name="sf22"/>
+            <topicDocumentation name="sf24"/>
+        </topicDocumentations>
+    </component>
+</processDocumentation>

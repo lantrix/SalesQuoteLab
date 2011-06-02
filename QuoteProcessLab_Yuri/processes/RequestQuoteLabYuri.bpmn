@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="11.1.1" fileRevision="20100611"?>
+<definitions xsi:schemaLocation="http://www.omg.org/bpmn20" xmlns:ns2="http://xmlns.oracle.com/bpm/OracleExtensions" xmlns="http://www.omg.org/bpmn20" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <peopleGroup name="Role" id="lane1">
+        <ns2:OracleExtensions>
+            <ns2:GraphicsAttributes backgroundColor="-1761607681">
+                <ns2:Position y="0" x="0"/>
+                <ns2:Size height="0" width="216"/>
+            </ns2:GraphicsAttributes>
+            <ns2:LaneAttributes roleId="Role"/>
+        </ns2:OracleExtensions>
+    </peopleGroup>
+    <process processType="executable" name="RequestQuoteLab_Yuri" id="RequestQuoteLabYuri">
+        <ns2:OracleExtensions>
+            <ns2:FeatureSet>
+                <ns2:BooleanFeature value="false" name="atomic"/>
+                <ns2:BooleanFeature value="false" name="instanceScreenflow"/>
+                <ns2:BooleanFeature value="false" name="isCallable"/>
+                <ns2:BooleanFeature value="true" name="sharePredefineVariables"/>
+                <ns2:StringFeature value="" name="AUTHOR"/>
+                <ns2:StringFeature value="default" name="GreedyExecutionMode"/>
+                <ns2:StringFeature value="" name="NAMESPACE"/>
+                <ns2:StringFeature value="PROJECT_DEFAULT" name="generatesEvents"/>
+                <ns2:StringFeature value="HORIZONTAL_LAYOUT" name="process-layout"/>
+                <ns2:StringFeature value="1.0" name="scale"/>
+                <ns2:StringFeature value="REGULAR" name="sealType"/>
+            </ns2:FeatureSet>
+        </ns2:OracleExtensions>
+        <userTask implementation="other" isForCompensation="false" name="UserTask" id="activity0">
+            <ns2:OracleExtensions>
+                <ns2:GraphicsAttributes>
+                    <ns2:Position y="108" x="228"/>
+                    <ns2:Size height="21" width="21"/>
+                </ns2:GraphicsAttributes>
+                <ns2:FeatureSet>
+                    <ns2:BooleanFeature value="false" name="reinitiate"/>
+                    <ns2:BooleanFeature value="false" name="manualCreation"/>
+                    <ns2:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
+                    <ns2:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
+                    <ns2:StringFeature value="REUSE_PAYLOAD" name="reinitiatorPolicy"/>
+                    <ns2:StringFeature value="SIMPLE" name="humanTaskType"/>
+                    <ns2:StringFeature value="" name="reinitiateSource"/>
+                </ns2:FeatureSet>
+                <ns2:HumanTask usesTransformations="false"/>
+            </ns2:OracleExtensions>
+            <ioSpecification/>
+            <performer name="Role" id="lane1"/>
+        </userTask>
+        <startEvent isInterrupting="false" name="Start" id="startEvent0">
+            <ns2:OracleExtensions>
+                <ns2:GraphicsAttributes>
+                    <ns2:Position y="108" x="108"/>
+                    <ns2:Size height="21" width="21"/>
+                </ns2:GraphicsAttributes>
+                <ns2:FeatureSet>
+                    <ns2:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
+                    <ns2:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
+                </ns2:FeatureSet>
+            </ns2:OracleExtensions>
+            <outputSet/>
+        </startEvent>
+        <endEvent name="End" id="endEvent0">
+            <ns2:OracleExtensions>
+                <ns2:GraphicsAttributes>
+                    <ns2:Position y="108" x="348"/>
+                    <ns2:Size height="21" width="21"/>
+                </ns2:GraphicsAttributes>
+                <ns2:FeatureSet>
+                    <ns2:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
+                    <ns2:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
+                </ns2:FeatureSet>
+            </ns2:OracleExtensions>
+            <inputSet/>
+        </endEvent>
+        <sequenceFlow targetRef="activity0" sourceRef="startEvent0" name="sf22" id="sf22">
+            <ns2:OracleExtensions>
+                <ns2:SequenceFlowAttributes/>
+                <ns2:FeatureSet>
+                    <ns2:BooleanFeature value="false" name="collapseMessage"/>
+                    <ns2:StringFeature value="-2147483648,-2147483648" name="curve"/>
+                    <ns2:StringFeature value="STRAIGHT" name="routing"/>
+                </ns2:FeatureSet>
+            </ns2:OracleExtensions>
+        </sequenceFlow>
+        <sequenceFlow targetRef="endEvent0" sourceRef="activity0" name="sf24" id="sf24">
+            <ns2:OracleExtensions>
+                <ns2:SequenceFlowAttributes/>
+                <ns2:FeatureSet>
+                    <ns2:BooleanFeature value="false" name="collapseMessage"/>
+                    <ns2:StringFeature value="-2147483648,-2147483648" name="curve"/>
+                    <ns2:StringFeature value="STRAIGHT" name="routing"/>
+                </ns2:FeatureSet>
+            </ns2:OracleExtensions>
+        </sequenceFlow>
+    </process>
+</definitions>
