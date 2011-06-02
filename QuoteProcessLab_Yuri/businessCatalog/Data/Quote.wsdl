@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?bpmo version="11.1.1" build="5682" fullName="Data.Quote" modifiers="268435456"?>
+<!--########################################################################################-->
+<!--####                                                                                ####-->
+<!--####          THIS IS AN AUTO GENERATED FILE. PLEASE DO NOT MANUALLY MODIFY         ####-->
+<!--#### CHANGES TO THIS FILE MAY PRODUCE UNEXPECTED BEHAVIOR AND WOULD BE OVERWRITTEN  ####-->
+<!--####                                                                                ####-->
+<!--########################################################################################-->
+<definitions targetNamespace="http://xmlns.oracle.com/bpm/bpmobject/Data/Quote.Interface" name="Quote" xmlns:xsd="http://www.w3.org/2001/XMLSchema"  xmlns:oj="http://www.mycompany.com/ns/salesquote"  xmlns:tns="http://xmlns.oracle.com/bpm/bpmobject/Data/Quote.Interface"  xmlns="http://schemas.xmlsoap.org/wsdl/"  xmlns:bpmo="http://xmlns.oracle.com/bpm/bpmobject/" >
+    <types>
+        <xsd:schema>
+            <xsd:import namespace="http://www.mycompany.com/ns/salesquote" schemaLocation="../../xsd/Quote.xsd"/>
+        </xsd:schema>
+    </types>
+    <portType name="QuotePortType"/>
+    <binding name="QuotePortTypeBinding" type="tns:QuotePortType">
+        <bpmo:binding element="oj:QuoteRequest"/>
+    </binding>
+</definitions>

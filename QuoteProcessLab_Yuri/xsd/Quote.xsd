@@ -1,0 +1,155 @@
+<?xml version= '1.0' encoding= 'UTF-8' ?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+     xmlns:qt="http://www.mycompany.com/ns/salesquote" targetNamespace="http://www.mycompany.com/ns/salesquote"
+     elementFormDefault="qualified">
+    <annotation>
+        <documentation xml:lang="en">Sales Quote Request XSD</documentation>
+    </annotation>
+    <element name="QuoteRequest" type="qt:QuoteRequestType"/>
+    <complexType name="QuoteRequestType">
+        <sequence>
+            <element name="Summary" type="qt:QuoteSummaryType"/>
+            <element name="ProductItem" maxOccurs="unbounded" minOccurs="0" type="qt:ProductItemType"/>
+            <element name="LicenseTerm" maxOccurs="unbounded" minOccurs="0" type="qt:LicenseTermType"/>
+            <element name="QuoteRequestStatus" type="string"/>
+            <element name="RecommendedDiscount" type="qt:DiscountRecommendationType" minOccurs="0"/>
+        </sequence>
+    </complexType>
+    <complexType name="QuoteSummaryType">
+        <sequence>
+            <element name="OpportunityID" type="string"/>
+            <element name="AccountName" type="string"/>
+            <element name="NewCustomer" type="string" minOccurs="0"/>
+            <element name="PurchaseToDate" type="double" minOccurs="0"/>
+            <element name="Address" type="qt:AddressType" minOccurs="0"/>
+            <element name="Contacts" type="qt:ContactType" minOccurs="0" maxOccurs="unbounded"/>
+            <element name="CustomerType" type="string" minOccurs="0"/>
+            <element name="Industry" type="string" minOccurs="0"/>
+            <element name="SalesRepId" type="string"/>
+            <element name="SalesRepName" type="string" minOccurs="0"/>
+            <element name="SalesRepContact" type="string" minOccurs="0"/>
+            <element name="ValidUntil" type="date" minOccurs="0"/>
+            <element name="TotalNetRevenue" type="double" minOccurs="0"/>
+            <element name="EffectiveDiscount" type="double" minOccurs="0"/>
+        </sequence>
+    </complexType>
+    <xsd:complexType name="ProductItemType">
+        <xsd:sequence>
+            <xsd:element name="ProductID" maxOccurs="1" type="xsd:string"/>
+            <xsd:element name="ProductName" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+            <xsd:element name="Quantity" maxOccurs="1" type="xsd:int"/>
+            <xsd:element name="ListPrice" type="xsd:double"/>
+            <xsd:element name="PreApprovedDiscount" minOccurs="0" maxOccurs="1" type="xsd:double"/>
+            <xsd:element name="RequestedDiscount" maxOccurs="1" type="xsd:double"/>
+            <xsd:element name="RestrictedItem" type="xsd:boolean" maxOccurs="1" minOccurs="0"/>
+            <xsd:element name="ControlledAvailability" type="xsd:boolean" maxOccurs="1" minOccurs="0"/>
+            <element name="Approval" type="qt:ApprovalType" maxOccurs="1" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <complexType name="ContactType">
+        <sequence>
+            <element name="Name" type="string"/>
+            <element name="Title" type="string"/>
+            <element name="PhoneNumber" type="string"/>
+            <element name="EmailAddress" type="string"/>
+        </sequence>
+    </complexType>
+    <complexType name="AddressType">
+        <sequence>
+            <element name="Street" type="string"/>
+            <element name="City" type="string"/>
+            <element name="State" type="string"/>
+            <element name="Zip" type="decimal"/>
+            <element name="Country" type="string"/>
+        </sequence>
+    </complexType>
+    <complexType name="QuotedSupportInfo">
+        <sequence>
+            <element name="SupportTerms" type="string" minOccurs="0"/>
+            <element name="SupportRevenue" type="decimal" minOccurs="0"/>
+        </sequence>
+    </complexType>
+    <complexType name="DiscountRecommendationType">
+        <sequence>
+            <element name="RevenueRange" type="string"/>
+            <element name="SuggestedDiscount" type="string"/>
+            <element name="FutureDiscountProvision" type="string"/>
+        </sequence>
+    </complexType>
+    <complexType name="ApprovalType">
+        <sequence>
+            <element name="Approver" maxOccurs="1" minOccurs="0" type="string"/>
+            <element name="Title" maxOccurs="1" minOccurs="0" type="string"/>
+            <element name="Approved" maxOccurs="1" minOccurs="0" type="boolean"/>
+            <element name="ApprovalIsConditional" maxOccurs="1" minOccurs="0" type="boolean"/>
+            <element name="ApprovalNote" type="string" maxOccurs="1" minOccurs="0"/>
+        </sequence>
+    </complexType>
+    <complexType name="LicenseTermType">
+        <sequence>
+            <element name="Category" type="qt:LicenseTermCategoryType" maxOccurs="1"/>
+            <element name="Type" type="qt:LicenseTermTypeType" maxOccurs="1"/>
+            <element name="Description" type="string" maxOccurs="1"/>
+            <element name="Approval" type="qt:ApprovalType" maxOccurs="1" minOccurs="0"/>
+        </sequence>
+    </complexType>
+    <simpleType name="LicenseTermCategoryType">
+        <restriction base="string">
+            <enumeration value="PriceHoldOptions"/>
+            <enumeration value="NonStandardPricingAndCurrencyOptions"/>
+            <enumeration value="LicenseManagementServicesOptions"/>
+            <enumeration value="NonStandardLicensingOptions"/>
+        </restriction>
+    </simpleType>
+    <simpleType name="LicenseTermTypeType">
+        <restriction base="string">
+            <enumeration value="FutureProgramPriceHolds"/>
+            <enumeration value="FutureDiscountProvisions"/>
+            <enumeration value="PriceHoldOnEntirePriceList"/>
+            <enumeration value="ModificationsToContractualPricing"/>
+            <enumeration value="Currency"/>
+            <enumeration value="PreferredCustomerProvisions"/>
+            <enumeration value="WaivingOrLoweringPurchaseMinimums"/>
+            <enumeration value="AuditWaivers"/>
+            <enumeration value="CancelAndReplace"/>
+            <enumeration value="DirectOrderFromCompetitors"/>
+            <enumeration value="ReciprocalTransaction"/>
+            <enumeration value="Hosting"/>
+            <enumeration value="HostingRights"/>
+            <enumeration value="NDA"/>
+        </restriction>
+    </simpleType>
+    <element name="ApprovalFlow" type="qt:ApprovalFlowType"/>
+    <complexType name="ApprovalFlowType">
+        <sequence>
+            <element name="SelfApproved" type="boolean"/>
+            <element name="NumberOfTier3Levels" type="int"/>
+            <element name="Tier2ApprovalNeeded" type="boolean"/>
+            <element name="Tier2Approvers" type="string"/>
+            <element name="Tier1ApprovalNeeded" type="boolean"/>
+            <element name="BusinessPracticesReviewNeeded" type="boolean"/>
+        </sequence>
+    </complexType>
+    <element name="RulesInput">
+        <complexType>
+            <sequence>
+                <element ref="qt:QuoteRequest"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="RulesOutput">
+        <complexType>
+            <sequence>
+                <element ref="qt:ApprovalFlow"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="ApproveTaskInfo">
+        <complexType>
+            <sequence>
+                <element name="GUID" type="xsd:string"/>
+                <element name="Namespace" type="xsd:string"/>
+            </sequence>
+        </complexType>
+    </element>
+</schema>
