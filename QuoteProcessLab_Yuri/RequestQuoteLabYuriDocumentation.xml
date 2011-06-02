@@ -23,11 +23,23 @@
             </topicDocumentation>
             <topicDocumentation name="activity0">
                 <labels>
-                    <label locale="en">UserTask</label>
+                    <label locale="en">Enter Quote Details</label>
                 </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="activity1">
+                <labels>
+                    <label locale="en">Business Practices Review</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
             </topicDocumentation>
             <topicDocumentation name="sf22"/>
             <topicDocumentation name="sf24"/>
+            <topicDocumentation name="sf27"/>
         </topicDocumentations>
     </component>
 </processDocumentation>
