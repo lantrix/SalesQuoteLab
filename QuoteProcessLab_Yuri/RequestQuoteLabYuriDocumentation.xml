@@ -11,16 +11,6 @@
                     <description locale="en">RequestQuoteLab</description>
                 </descriptions>
             </topicDocumentation>
-            <topicDocumentation name="startEvent0">
-                <labels>
-                    <label locale="en">Start</label>
-                </labels>
-            </topicDocumentation>
-            <topicDocumentation name="endEvent0">
-                <labels>
-                    <label locale="en">End</label>
-                </labels>
-            </topicDocumentation>
             <topicDocumentation name="activity0">
                 <labels>
                     <label locale="en">Enter Quote Details</label>
@@ -68,6 +58,16 @@
                 <descriptions>
                     <description locale="en"></description>
                 </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="startEvent0">
+                <labels>
+                    <label locale="en">Start</label>
+                </labels>
+            </topicDocumentation>
+            <topicDocumentation name="endEvent0">
+                <labels>
+                    <label locale="en">End</label>
+                </labels>
             </topicDocumentation>
             <topicDocumentation name="gateway0">
                 <labels>

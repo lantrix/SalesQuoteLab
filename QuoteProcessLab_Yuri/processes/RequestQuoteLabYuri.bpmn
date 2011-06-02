@@ -67,6 +67,7 @@
                     <ns2:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
                     <ns2:StringFeature value="REUSE_PAYLOAD" name="reinitiatorPolicy"/>
                     <ns2:StringFeature value="SIMPLE" name="humanTaskType"/>
+                    <ns2:StringFeature value="" name="reinitiateSource"/>
                 </ns2:FeatureSet>
                 <ns2:HumanTask usesTransformations="false"/>
             </ns2:OracleExtensions>
@@ -87,6 +88,7 @@
                     <ns2:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
                     <ns2:StringFeature value="REUSE_PAYLOAD" name="reinitiatorPolicy"/>
                     <ns2:StringFeature value="SIMPLE" name="humanTaskType"/>
+                    <ns2:StringFeature value="" name="reinitiateSource"/>
                 </ns2:FeatureSet>
                 <ns2:HumanTask usesTransformations="false"/>
             </ns2:OracleExtensions>
@@ -107,6 +109,7 @@
                     <ns2:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
                     <ns2:StringFeature value="REUSE_PAYLOAD" name="reinitiatorPolicy"/>
                     <ns2:StringFeature value="SIMPLE" name="humanTaskType"/>
+                    <ns2:StringFeature value="" name="reinitiateSource"/>
                 </ns2:FeatureSet>
                 <ns2:HumanTask usesTransformations="false"/>
             </ns2:OracleExtensions>
@@ -127,6 +130,7 @@
                     <ns2:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
                     <ns2:StringFeature value="REUSE_PAYLOAD" name="reinitiatorPolicy"/>
                     <ns2:StringFeature value="SIMPLE" name="humanTaskType"/>
+                    <ns2:StringFeature value="" name="reinitiateSource"/>
                 </ns2:FeatureSet>
                 <ns2:HumanTask usesTransformations="false"/>
             </ns2:OracleExtensions>
@@ -147,6 +151,7 @@
                     <ns2:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
                     <ns2:StringFeature value="REUSE_PAYLOAD" name="reinitiatorPolicy"/>
                     <ns2:StringFeature value="SIMPLE" name="humanTaskType"/>
+                    <ns2:StringFeature value="" name="reinitiateSource"/>
                 </ns2:FeatureSet>
                 <ns2:HumanTask usesTransformations="false"/>
             </ns2:OracleExtensions>
