@@ -19,6 +19,24 @@
             <ns2:LaneAttributes roleId="BusinessPractices"/>
         </ns2:OracleExtensions>
     </peopleGroup>
+    <peopleGroup name="Approvers" id="lane2">
+        <ns2:OracleExtensions>
+            <ns2:GraphicsAttributes backgroundColor="-1761607681">
+                <ns2:Position y="0" x="400"/>
+                <ns2:Size height="0" width="200"/>
+            </ns2:GraphicsAttributes>
+            <ns2:LaneAttributes roleId="Approvers"/>
+        </ns2:OracleExtensions>
+    </peopleGroup>
+    <peopleGroup name="Contracts" id="lane3">
+        <ns2:OracleExtensions>
+            <ns2:GraphicsAttributes backgroundColor="-1761607681">
+                <ns2:Position y="0" x="600"/>
+                <ns2:Size height="0" width="200"/>
+            </ns2:GraphicsAttributes>
+            <ns2:LaneAttributes roleId="Contracts"/>
+        </ns2:OracleExtensions>
+    </peopleGroup>
     <process processType="executable" name="RequestQuoteLab_Yuri" id="RequestQuoteLabYuri">
         <ns2:OracleExtensions>
             <ns2:FeatureSet>
