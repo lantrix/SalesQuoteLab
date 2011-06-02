@@ -77,11 +77,25 @@
                     <description locale="en"></description>
                 </descriptions>
             </topicDocumentation>
+            <topicDocumentation name="gateway1">
+                <labels>
+                    <label locale="en">Approvals</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="gateway2">
+                <labels>
+                    <label locale="en">Approvals Merge</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
             <topicDocumentation name="sf22"/>
             <topicDocumentation name="sf24"/>
             <topicDocumentation name="sf27"/>
-            <topicDocumentation name="sf30"/>
-            <topicDocumentation name="sf33"/>
             <topicDocumentation name="sf36"/>
             <topicDocumentation name="sf39"/>
             <topicDocumentation name="sf45">
@@ -94,6 +108,11 @@
                     <description locale="en"></description>
                 </descriptions>
             </topicDocumentation>
+            <topicDocumentation name="sf64"/>
+            <topicDocumentation name="sf68"/>
+            <topicDocumentation name="sf71"/>
+            <topicDocumentation name="sf73"/>
+            <topicDocumentation name="sf76"/>
         </topicDocumentations>
     </component>
 </processDocumentation>
